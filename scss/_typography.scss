@@ -1,0 +1,71 @@
+body {
+    font-family: $font-body;
+    font-weight: $weight-body;
+    line-height: $line-height;
+    font-size: $font-size;
+}
+
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    background: linear-gradient($link-color, $link-color) right $link-underline-offset no-repeat;
+    background-size: 0 1.5px;
+    transition: all 150ms ease;
+    &:hover, &:focus {
+        background-size: 100% 1.5px;
+        outline: none;
+    }
+}
+
+
+h1, h2, h3, h4 {
+    font-family: $font-heading;
+    font-weight: $weight-heading;
+}
+
+strong, b {
+    font-weight: $weight-body-bold;
+}
+
+pre, code {
+    font-family: $font-code;
+    font-size: 14px;
+    line-height: $line-height * 18/14;
+}
+
+pre, blockquote {
+    padding-top: $line-height * 0.5em;
+    padding-bottom: $line-height * 0.5em;
+}
+code {
+    padding: 0;
+}
+
+blockquote {
+    margin-left: 0.5em;
+    padding-left: 0.5em;
+    border-left: 0.5em solid $body-color;
+    cite {
+        display: block;
+        text-align: right;
+        &:before {
+            content: '—';
+        }
+    }
+}
+
+main {
+    .container > p:first-of-type:first-letter {
+        color: #333;
+        font-size: 4em;
+        float: left;
+        margin-right: 0.5rem;
+        line-height: 0.57;
+        font-weight: $weight-heading;
+        font-family: $font-heading;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        text-transform: lowercase;
+    }
+}

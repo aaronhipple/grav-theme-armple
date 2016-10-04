@@ -1,0 +1,14 @@
+en:
+  JUMBOTRON:
+    BYLINE: Byline
+    BANNER: Banner Image
+    PAGE_MEDIA: Jumbotron Image (First image only)
+  FREEFORM:
+    STYLE_CLASSES: Style Classes
+    STYLE_CLASSES_HELP: Adjust this text modular's appearance using these styles
+    STYLE_CLASS_OPTIONS:
+      INVERSE: Inverted Colors
+      COLUMNS: Multiple Columns
+  FORM_DATA:
+    SUMMARY: "Here is the summary of what you wrote to us:"
+  ERROR: Error

@@ -1,0 +1,51 @@
+.toggler {
+  width: 60 * $menu-scale;
+  height: 45 * $menu-scale;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+    span {
+      display: block;
+      position: absolute;
+      height: 9 * $menu-scale;
+      width: 100%;
+      background: $body-color;
+      border-radius: 9 * $menu-scale;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+    span:nth-child(1) {
+      top: 0 * $menu-scale;
+      transform-origin: left center;
+    }
+
+    span:nth-child(2) {
+      top: 18 * $menu-scale;
+      transform-origin: left center;
+    }
+
+    span:nth-child(3) {
+      top: 36 * $menu-scale;
+      transform-origin: left center;
+    }
+
+    &.open span:nth-child(1) {
+      transform: rotate(45deg);
+      top: -3 * $menu-scale;
+      left: 8 * $menu-scale;
+    }
+
+    &.open span:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+
+    &.open span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 39 * $menu-scale;
+      left: 8 * $menu-scale;
+    }
+}

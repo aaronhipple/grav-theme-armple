@@ -1,0 +1,35 @@
+@mixin set-colors($fg, $bg) {
+    background-color: $bg;
+    color: $fg;
+    a {
+        text-shadow:
+            1px 1px 0 $bg,
+            1px -1px 0 $bg,
+            -1px -1px 0 $bg,
+            -1px 1px 0 $bg;
+    }
+    ::selection {
+        background: transparentize($fg, 1/3);
+        color: $bg;
+    }
+}
+
+@mixin lock-font-size($size-baseline, $size-increase, $break-small, $break-large) {
+    $x1: $break-small;
+    $x2: $break-large;
+    $y1: 0;
+    $y2: $size-increase;
+
+    $m: ($y2 - $y1) / ($x2 - $x1);
+    $b: $y1 - ($m * $x1);
+    
+    font-size: $size-baseline;
+
+    @media (min-width: $break-small) {
+      font-size: calc( #{$size-baseline} + #{$m * 100vw} + #{$b} );
+    }
+
+    @media (min-width: $break-large) {
+      font-size: calc( #{$size-baseline} + #{$size-increase} );
+    }
+}

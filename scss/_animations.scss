@@ -1,0 +1,40 @@
+@keyframes shrinkin {
+    from {
+        opacity: 0;
+        transform: scale(3) translateY(5em);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes flickerin {
+    0% {
+        opacity: 0.25;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

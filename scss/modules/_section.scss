@@ -1,0 +1,30 @@
+main section {
+    padding: $gap 0;
+    .container {
+        overflow: hidden;
+    }
+}
+
+section.inverse {
+    clip-path: polygon(0% 0%, 100% 20px, 100% 100%, 0% calc(100% - 20px));
+    @include set-colors($body-bg, $body-color);
+}
+
+section.columns {
+    blockquote, ul, ol, dl, pre {
+        break-inside: avoid;
+    }
+    @media (min-width: $container-width) {
+        h2, h3, h4, .break-columns {
+            text-align: center;
+            column-span: all;
+            + * {
+                margin-top: 0;
+            }
+        }
+        > .container {
+            columns: $columns (($container-width - ($column-gap * ($columns - 1))) / $columns);
+            column-gap: $column-gap;
+        }
+    }
+}

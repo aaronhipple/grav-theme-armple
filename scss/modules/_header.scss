@@ -1,0 +1,88 @@
+
+header {
+    .brand {
+        font-family: $font-heading;
+        font-weight: $weight-brand;
+        font-size: 1.5em;
+    }
+    .container {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        @media (min-width: $container-width) {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            nav {
+                flex: 1;
+            }
+        }
+    }
+    @media (max-width: $container-width) {
+        .header-bar {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            position: relative;
+            z-index: 106;
+            background: $body-bg;
+            padding: 1em;
+        }
+    }
+    label.toggler {
+        @media (min-width: $container-width) {
+            display: none;
+        }
+        display: block;
+        text-align: right;
+    }
+    input[type=checkbox] {
+        display: none;
+    }
+    input:checked + nav {
+        transform: translateY(0);
+    }
+    nav {
+        background: $body-bg;
+        @media (max-width: $container-width) {
+            transform: translateY(-100%);
+            transition: all 0.3s ease;
+            position: absolute;
+            width: 100%;
+            top: calc(100%);
+            left: 0;
+            z-index: 105;
+        }
+        ul {            
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+            li {
+                margin: 0;
+                @media (min-width: $container-width) {
+                    display: inline-block;
+                    margin: 1em;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+                a {
+                    @media (max-width: $container-width) {
+                        background: none;
+                        text-shadow: none;
+                        padding: 0.5em;
+                        text-align: left;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    // background: $body-bg;
+    color: $body-color;
+}

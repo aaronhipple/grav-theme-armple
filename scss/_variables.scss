@@ -1,0 +1,25 @@
+$bootstrap-sass-asset-helper: true;
+$container-width: 45em;
+$columns: 2;
+$line-height: 1.5;
+$column-gap: 3em;
+$gap: $column-gap;
+$body-bg: #E7E6E4;
+$body-color: #56524E;
+$link-color: #B38759;
+$link-underline-offset: 1.18em;
+$inverse-bg: $body-color;
+$inverse-color: $body-bg;
+$menu-scale: 0.025em;
+
+$font-size: 20px;
+$font-heading: 'Yeseva One', display;
+$weight-heading: 400;
+$font-body: 'Amiri', serif;
+$weight-body: 400;
+$weight-body-bold: 700;
+$weight-brand: $weight-heading;
+$font-code: 'Share Tech Mono', monospace;
+
+$font-small-lockpoint: ($container-width / 1em) * $font-size;
+$font-large-lockpoint: ($container-width + 30em / 1em) * $font-size;
