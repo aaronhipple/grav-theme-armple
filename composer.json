@@ -1,5 +1,5 @@
 {
-    "name": "aaron/grav-theme-armple",
+    "name": "aaronhipple/grav-theme-armple",
     "type": "grav-theme",
     "description": "Aaron and Colette's theme for Grav",
     "keywords": ["theme","grav","armple","personal"],
@@ -19,7 +19,7 @@
     "extra": {
         "installer-name": "armple",
         "installer-paths": {
-            "user/themes/{$name}/": ["aaron/grav-theme-armple"]
+            "user/themes/{$name}/": ["aaronhipple/grav-theme-armple"]
         }
     }
 }
