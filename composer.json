@@ -1,0 +1,25 @@
+{
+    "name": "aaron/grav-theme-armple",
+    "type": "grav-theme",
+    "description": "Aaron and Colette's theme for Grav",
+    "keywords": ["theme","grav","armple","personal"],
+    "homepage": "https://www.aaronhipple.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aaron Hipple",
+            "email": "ahipple@gmail.com",
+            "homepage": "https://www.aaronhipple.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "installer-name": "armple",
+        "installer-paths": {
+            "user/themes/{$name}/": ["aaron/grav-theme-armple"]
+        }
+    }
+}
