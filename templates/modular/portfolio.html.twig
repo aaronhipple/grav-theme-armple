@@ -1,0 +1,15 @@
+{% set classes = page.header.classes %}
+{% set source = page.header.source %}
+<section class="modular modular-portfolio {{ classes | join(' ') }}">
+    <div class="container">
+        {{ content }}
+        <div class="frames">
+            <div class="frame-wrapper desktop-size">
+                <iframe src="{{ source }}" frameborder="0"></iframe>
+            </div>
+            <div class="frame-wrapper phone-size">
+                <iframe src="{{ source }}" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
