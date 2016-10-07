@@ -1,0 +1,34 @@
+title: Freeform
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            content:
+              type: markdown
+              validate:
+                type: textarea
+
+            source:
+              type: text
+              label: PORTFOLIO.SOURCE
+              help: PORTFOLIO.SOURCE_HELP
+
+            header.classes:
+              type: select
+              multiple: true
+              label: FREEFORM.STYLE_CLASSES
+              help: FREEFORM.STYLE_CLASSES_HELP
+              options:
+                columns: FREEFORM.STYLE_CLASS_OPTIONS.COLUMNS
+                inverse: FREEFORM.STYLE_CLASS_OPTIONS.INVERSE
+              validate:
+                type: list
