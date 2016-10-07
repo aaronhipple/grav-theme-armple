@@ -1,6 +1,6 @@
 {
   "name": "grav-theme-armple",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Armple",
   "dependencies": {
     "babel-runtime": "^6.11.6"
