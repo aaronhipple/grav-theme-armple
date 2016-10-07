@@ -1,0 +1,14 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+	<div class="container">
+		{{ content }}
+
+		<div class="alert">{{ form.message }}</div>
+		<p>Your submission:</p>
+
+		{% include "forms/data.html.twig" %}
+	</div>
+
+{% endblock %}
