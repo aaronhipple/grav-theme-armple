@@ -22,7 +22,7 @@
 
     $m: ($y2 - $y1) / ($x2 - $x1);
     $b: $y1 - ($m * $x1);
-    
+
     font-size: $size-baseline;
 
     @media (min-width: $break-small) {
@@ -32,4 +32,31 @@
     @media (min-width: $break-large) {
       font-size: calc( #{$size-baseline} + #{$size-increase} );
     }
+}
+
+@mixin screenreader-only() {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+@mixin screenreader-only-focusable() {
+    &:active,
+    &:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+    }
+}
+
+@mixin clip-section($amount: 10px) {
+    clip-path: polygon(0% 0%, 100% $amount, 100% 100%, 0% calc(100% - #{$amount}));
 }

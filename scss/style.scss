@@ -1,7 +1,8 @@
 @import 'variables';
 @import 'mixins';
-@import 'animations';
+// @import 'animations';
 @import 'typography';
+@import 'forms';
 @import 'modules/article';
 @import 'modules/footer';
 @import 'modules/header';
@@ -41,6 +42,6 @@ main {
     animation-fill-mode: forwards;
     position: relative;
     margin: auto;
-    text-align: justify;    
+    text-align: justify;
 }
 

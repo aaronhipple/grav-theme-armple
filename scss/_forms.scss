@@ -1,0 +1,86 @@
+@media (min-width: $container-width) {
+  .columns form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .form-field {
+      flex: 0 0 calc((100% / #{$columns}) - (#{$gap} / #{$columns}));
+    }
+    .buttons {
+      flex: 1 0 100%;
+    }
+  }
+}
+
+.form-field {
+  margin-top: $font-size * $line-height / 2;
+  text-align: left;
+  label {
+    display: block;
+    font-size: 0.825em;
+  }
+  .required {
+    opacity: 0.333;
+  }
+}
+
+form .buttons {
+  text-align: center;
+  margin: auto;
+  margin-top: $font-size * $line-height;
+}
+
+input[type=number],
+input[type=email],
+input[type=text],
+textarea {
+  display: block;
+  transition: all $transition-time ease;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  outline: none;
+  width: 100%;
+  padding: ($font-size * $line-height / 4) 0;
+
+  background: linear-gradient($body-color, $body-color) left bottom no-repeat;
+  background-size: 75% 3px;
+  .inverse & {
+    background: linear-gradient($body-bg, $body-bg) left bottom no-repeat;
+    background-size: 75% 3px;
+  }
+
+  &:focus {
+    background-size: 100% 3px;
+    outline: none;
+  }
+}
+
+button,
+.button {
+  transition: all $transition-time ease;
+  font: inherit;
+  padding: 0.25em 1em;
+  margin: 0;
+  outline: 0;
+  line-height: inherit;
+  background: none;
+  cursor: pointer;
+
+  color: $body-color;
+  border: 3px solid $body-color;
+  &:focus, &:hover {
+    background-color: lighten($body-bg, 10%);
+  }
+
+  .inverse & {
+    color: $body-bg;
+    border-color: $body-bg;
+    &:focus, &:hover {
+      background-color: darken($body-color, 10%);
+    }
+  }
+
+}
+

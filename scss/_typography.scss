@@ -9,9 +9,9 @@ body {
 a {
     color: $link-color;
     text-decoration: none;
-    background: linear-gradient($link-color, $link-color) right $link-underline-offset no-repeat;
+    background: linear-gradient($link-color, $link-color) center $link-underline-offset no-repeat;
     background-size: 0 1.5px;
-    transition: all 150ms ease;
+    transition: all $transition-time ease;
     &:hover, &:focus {
         background-size: 100% 1.5px;
         outline: none;
@@ -57,7 +57,7 @@ blockquote {
 
 main {
     .container > p:first-of-type:first-letter {
-        color: #333;
+        color: darken($body-color, 10%);
         font-size: 4em;
         float: left;
         margin-right: 0.5rem;
@@ -65,7 +65,29 @@ main {
         font-weight: $weight-heading;
         font-family: $font-heading;
     }
+    .inverse .container > p:first-of-type:first-letter {
+        color: darken($body-bg, 10%);
+    }
+    .no-drop .container > p:first-of-type:first-letter {
+        color: inherit;
+        font: inherit;
+        float: none;
+        margin: 0;
+        line-height: inherit;
+    }
     h1, h2, h3, h4, h5, h6 {
         text-transform: lowercase;
     }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
 }

@@ -6,11 +6,11 @@ main section {
 }
 
 section.inverse {
-    clip-path: polygon(0% 0%, 100% 20px, 100% 100%, 0% calc(100% - 20px));
+    @include clip-section();
     @include set-colors($body-bg, $body-color);
 }
 
-section.columns {
+section.raw-content.columns {
     blockquote, ul, ol, dl, pre {
         break-inside: avoid;
     }

@@ -1,4 +1,5 @@
-.jumbotron {    
+.jumbotron {
+    @include clip-section();
     position: relative;
     z-index: 3;
     perspective: 15em;
@@ -26,7 +27,7 @@
         margin: 0.25em 0.5em;
         padding: 1rem;
         padding-bottom: 3.5rem;
-        @include lock-font-size(2.5rem, 2em, $container-width, $container-width + 30em);
+        @include lock-font-size(3rem, 1.5em, $container-width, $container-width + 30em);
         // font-size: 4em;
         @media (min-width: $container-width) {
             margin: 0.25em 1em;

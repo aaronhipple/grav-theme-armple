@@ -11,7 +11,7 @@
     <link rel="canonical" href="{{ page.url(true, true) }}" />
 
     {% block stylesheets %}
-        {% do assets.addCss('https://fonts.googleapis.com/css?family=Amiri|Yeseva+One:400', 100) %}
+        {% do assets.addCss('https://fonts.googleapis.com/css?family=Maitree:400,700|Montserrat', 100) %}
         {% do assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow-night-eighties.min.css', 100) %}
         {% do assets.addCss('theme://assets/css/style.css', 101) %}
 
@@ -40,9 +40,11 @@
             <div class="header-bar">
                 <div class="brand"><a href="{{ base_url == '' ? '/' : base_url }}">{{ config.site.title }}</a></div>
                 <label for="header-nav-toggle" class="toggler">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                    <span class="icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
                 </label>
             </div>
             <input type="checkbox" id="header-nav-toggle">

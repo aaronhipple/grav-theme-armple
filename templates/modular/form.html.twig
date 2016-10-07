@@ -1,0 +1,7 @@
+{% set classes = page.header.classes %}
+<section class="modular modular-form {{ classes | join(' ') }}">
+	<div class="container">
+		{{ content }}
+		{% include "forms/form.html.twig" %}
+	</div>
+</section>
