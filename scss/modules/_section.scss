@@ -1,8 +1,18 @@
 main section {
-    padding: $gap 0;
+    padding: $gap/2 0;
+    @media (min-width: $container-width) {
+        padding: $gap 0;
+    }
     .container {
         overflow: hidden;
     }
+    h1, h2, h3, h4, h5, h6 {
+        text-align: left;
+    }
+}
+
+section:not(.inverse) + section:not(.inverse) {
+    padding-top: 0;
 }
 
 section.inverse {

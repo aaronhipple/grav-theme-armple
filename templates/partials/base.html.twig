@@ -71,7 +71,9 @@
     {% block footer %}
     <footer>
         <div class="container">
-            {% include 'partials/navigation.html.twig' with { 'children': true } %}
+            <nav>
+                {% include 'partials/navigation.html.twig' with { 'children': true } %}
+            </nav>
             <p class="copyright">&copy;{{ now | date('Y') }} {{ config.site.copyright }}</p>
         </div>
     </footer>

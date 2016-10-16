@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Fullscreen styles for footer nav
+### Fixed
+- Nav items unclickable at mobile screen sizes
+- Improved mobile view of portfolio list items
 
 ## [0.4.0] - 2016-10-16
 ### Added
