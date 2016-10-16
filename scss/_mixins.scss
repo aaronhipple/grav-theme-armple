@@ -1,3 +1,28 @@
+@mixin button() {
+    transition: all $transition-time ease;
+    font: inherit;
+    padding: 0.25em 1em;
+    margin: 0;
+    outline: 0;
+    line-height: inherit;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+
+    color: $body-color;
+    border: 3px solid currentColor;
+    &:focus, &:hover {
+        background-color: lighten($body-bg, 10%);
+    }
+
+    .inverse & {
+        color: $body-bg;
+        &:focus, &:hover {
+            background-color: darken($body-color, 10%);
+        }
+    }
+}
+
 @mixin set-colors($fg, $bg) {
     background-color: $bg;
     color: $fg;
@@ -54,6 +79,14 @@
         margin: 0;
         overflow: visible;
         clip: auto;
+    }
+}
+
+@mixin screenreader-only-focusable-button() {
+    &:active,
+    &:focus {
+        position: absolute;
+        @include button();
     }
 }
 

@@ -1,0 +1,14 @@
+title: PLUGIN_ADMIN.MODULAR
+'@extends':
+    type: modular
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        header:
+          fields:
+            uploads:
+              type: pagemedia
+              label: PLUGIN_ADMIN.PAGE_MEDIA

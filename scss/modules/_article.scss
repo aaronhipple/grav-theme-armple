@@ -1,5 +1,5 @@
-article {
-    h2, h3, h4 {
+main > article {
+    h1, h2, h3, h4 {
         text-transform: lowercase;
     }
     p, ul, ol, dl, pre {
@@ -19,13 +19,9 @@ article {
             margin: auto;
             padding: $gap 1em;
         }
-        &:nth-child(even) {
-            clip-path: polygon(0% 0, 100% 20px, 100% 100%, 0% calc(100% - 20px));
-            @include set-colors($body-bg, $body-color);
-        }
     }
     @media (min-width: $container-width) {
-        h2, h3, h4, .break-columns {
+        h1, h2, h3, h4, .break-columns {
             text-align: center;
             column-span: all;
             + * {

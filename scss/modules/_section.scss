@@ -15,7 +15,7 @@ section.raw-content.columns {
         break-inside: avoid;
     }
     @media (min-width: $container-width) {
-        h2, h3, h4, .break-columns {
+        h1, h2, h3, h4, .break-columns {
             text-align: center;
             column-span: all;
             + * {
@@ -27,4 +27,8 @@ section.raw-content.columns {
             column-gap: $column-gap;
         }
     }
+}
+
+section.hide-header h1 {
+    @include screenreader-only();
 }

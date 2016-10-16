@@ -34,6 +34,7 @@
 {% endblock head %}
 </head>
 <body class="{{ page.header.body_classes }}">
+    <a id="skip" href="#content">{{ 'ACCESSIBILITY.SKIP_TO_CONTENT'|t }}</a>
     {% block header %}
     <header>
         <div class="container">
@@ -62,7 +63,7 @@
     {% endblock %}
 
     {% block body %}
-    <main class="{{ class }}">
+    <main id="content" class="{{ class }}">
         {% block content %}{% endblock %}
     </main>
     {% endblock %}

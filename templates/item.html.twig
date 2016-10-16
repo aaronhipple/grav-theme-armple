@@ -1,0 +1,7 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+	<div class="container">
+		{% include 'partials/blog_item.html.twig' with {'blog':page.parent, 'truncate':false} %}
+	</div>
+{% endblock %}

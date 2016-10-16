@@ -1,3 +1,77 @@
-{% for meta in page.metadata %}
+{% set metadata = page.metadata %}
+
+{% set header_image = page.header.header_image | defined(true) %}
+{% set header_image_file = page.header.header_image_file %}
+
+{% if not header_image %}
+    {% set image = null %}
+{% elseif header_image_file %}
+    {% set image = page.media.images[header_image_file] %}
+{% else %}
+    {% set image = page.media.images|first %}
+{% endif %}
+
+{% set title = page.title %}
+{% set byline = page.header.byline %}
+{% set description = byline %}
+
+{% if image is not empty  %}
+    {% set image_url = base_url_absolute ~ image.url %}
+{% endif %}
+
+{# Facebook/Open Graph Tags #}
+
+{% if title is not empty and metadata['og:title'] is empty %}
+    {% set metadata = metadata|merge({'og:title': { name: 'og:title', content: title }}) %}
+{% endif %}
+
+{% if image is not empty and metadata['og:image'] is empty %}
+    {% set metadata = metadata|merge({'og:image': { name: 'og:image', content: image_url}}) %}
+{% endif %}
+
+{% if description is not empty and metadata['og:description'] is empty %}
+    {% set metadata = metadata|merge({'og:description': { name: 'og:description', content: description }}) %}
+{% endif %}
+
+{% if metadata['og:site_name'] is empty %}
+    {% set metadata = metadata|merge({'og:site_name': { name: 'og:site_name', content: config.site.title }}) %}
+{% endif %}
+
+{% if metadata['og:url'] is empty %}
+    {% set metadata = metadata|merge({'og:url': { name: 'og:url', content: page.permalink }}) %}
+{% endif %}
+
+{% if metadata['og:type'] is empty %}
+    {% set metadata = metadata|merge({'og:type': { name: 'og:type', content: 'website' }}) %}
+{% endif %}
+
+{# Twitter Cards #}
+
+{% if metadata['twitter:card'] is empty %}
+    {% set metadata = metadata|merge({'twitter:card': { name: 'twitter:card', content: 'summary' }}) %}
+{% endif %}
+
+
+{% if metadata['twitter:site'] is empty %}
+    {% set metadata = metadata|merge({'twitter:site': { name: 'twitter:site', content: config.site.twitter }}) %}
+{% endif %}
+
+{% if title is not empty and metadata['twitter:title'] is empty %}
+    {% set metadata = metadata|merge({'twitter:title': { name: 'twitter:title', content: title }}) %}
+{% endif %}
+
+
+{% if metadata['twitter:description'] is empty %}
+    {% set metadata = metadata|merge({'twitter:description': { name: 'twitter:description', content: description }}) %}
+{% endif %}
+
+{% if image is not empty and metadata['twitter:image'] is empty %}
+    {% set metadata = metadata|merge({'twitter:image': { name: 'twitter:image', content: image_url}}) %}
+{% endif %}
+
+
+
+
+{% for meta in metadata %}
 <meta {% if meta.name %}name="{{ meta.name }}" {% endif %}{% if meta.http_equiv %}http-equiv="{{ meta.http_equiv }}" {% endif %}{% if meta.charset %}charset="{{ meta.charset }}" {% endif %}{% if meta.property %}property="{{ meta.property }}" {% endif %}{% if meta.content %}content="{{ meta.content }}" {% endif %}/>
 {% endfor %}

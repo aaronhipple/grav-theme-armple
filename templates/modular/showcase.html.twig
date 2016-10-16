@@ -1,7 +1,8 @@
 {% set classes = page.header.classes %}
 {% set source = page.header.source %}
-<section class="modular modular-portfolio {{ classes | join(' ') }}">
+<section class="modular modular-showcase {{ classes | join(' ') }}">
     <div class="container">
+        <h1>{{ page.title }}</h1>
         {{ content }}
         <div class="frames">
             <div class="frame-wrapper desktop-size">

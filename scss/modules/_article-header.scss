@@ -1,0 +1,49 @@
+main > article {
+  > header:first-child {
+    @include clip-section();
+    position: relative;
+    z-index: 3;
+    perspective: 15em;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: stretch;
+    justify-content: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: $inverse-bg;
+    color: $inverse-color;
+
+    &.jumbotron {
+      min-height: 66vh;
+    }
+
+    h1 {
+      span {
+        display: block;
+        transform: rotateX(2deg);
+        transition: all 200ms ease;
+        text-shadow: 0 0.02em 0 $body-color;
+      }
+      line-height: 1.1;
+      margin: 0.25em 0.5em;
+      padding: 1rem;
+      @include lock-font-size(3rem, 1.5em, $container-width, $container-width + 30em);
+      // font-size: 4em;
+      @media (min-width: $container-width) {
+        margin: 0.25em 1em;
+      }
+    }
+    h1 + .byline {
+      text-transform: lowercase;
+      position: relative;
+      display: inline-block;
+      font-size: 1.5em;
+      text-shadow: 0 0.02em 0 $body-color;
+      padding: 0 1em;
+      margin-bottom: 1em;
+    }
+  }
+}

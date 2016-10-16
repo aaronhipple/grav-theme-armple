@@ -1,9 +1,20 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	<div class="container">
-		{{ content }}
-		{% include "forms/form.html.twig" %}
-	</div>
+	<article>
+		{% include 'partials/page-title.html.twig' %}
+		{% if content %}
+		<section>
+			<div class="container">
+				{{ content }}
+			</div>
+		</section>
+		{% endif %}
+		<section>
+			<div class="container">
+				{% include "forms/form.html.twig" %}
+			</div>
+		</section>
+	</article>
 {% endblock %}
 

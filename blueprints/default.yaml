@@ -1,0 +1,34 @@
+title: PLUGIN_ADMIN.DEFAULT
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        header:
+          type: tab
+          title: PAGE.HEADER_EXTRAS.LABEL
+          fields:
+            header.byline:
+              type: text
+              style: vertical
+              label: PAGE.HEADER_EXTRAS.BYLINE.LABEL
+              help: PAGE.HEADER_EXTRAS.BYLINE_HELP
+            header.header_image:
+              type: toggle
+              highlight: 1
+              label: PAGE.HEADER_EXTRAS.HEADER_IMAGE.LABEL
+              help: PAGE.HEADER_EXTRAS.HEADER_IMAGE.HELP
+              size: medium
+              options:
+                  1: PLUGIN_ADMIN.YES
+                  0: PLUGIN_ADMIN.NO
+              validate:
+                  type: bool
+            header.header_image_file:
+              type: pagemediaselect
+              style: vertical
+              label: PAGE.HEADER_EXTRAS.HEADER_IMAGE_FILE.LABEL
+              help: PAGE.HEADER_EXTRAS.HEADER_IMAGE_FILE.HELP
