@@ -1,0 +1,34 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set collection = page.collection() %}
+
+{% block content %}
+    <article class="portfolio">
+        {% include 'partials/page-title.html.twig' %}
+        <section>
+            <div class="container">
+                {{ page.content }}
+            </div>
+        </section>
+        <section class="inverse">
+            <div class="container">
+                <h1>{{ 'PORTFOLIO.ITEMS'|t }}</h1>
+                <div class="portfolio-items" role="list">
+                {% for item in collection %}
+                    {% set thumbnail = item.media.images|first %}
+                    <article
+                             {% if item.media.images %}
+                                 style="
+                                     background-image: url('{{ thumbnail.cropZoom(600, 400).url }}');
+                                     background-image: -webkit-image-set( url({{ thumbnail.cropZoom(600, 400).url }}) 1x, url({{ thumbnail.cropZoom(1200, 800).url }}) 2x );
+                                     "
+                             {% endif %}
+                             role="listitem">
+                        <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
+                    </article>
+                {% endfor %}
+                </div>
+            </div>
+        </section>
+    </article>
+{% endblock %}

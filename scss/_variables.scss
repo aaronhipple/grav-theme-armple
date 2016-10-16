@@ -6,10 +6,12 @@ $column-gap: 3em;
 $gap: $column-gap;
 $body-bg: #E7E6E4;
 $body-color: #56524E;
-$link-color: #B38759;
+$ideal-link-color: #b3702d;
+$link-color: darken($ideal-link-color, 15%);
 $link-underline-offset: bottom;
 $inverse-bg: $body-color;
 $inverse-color: $body-bg;
+$inverse-link-color: saturate(lighten($ideal-link-color, 30%), 15%);
 $menu-scale: 0.025em;
 
 $font-size: 20px;

@@ -1,14 +1,42 @@
 en:
-  JUMBOTRON:
-    BYLINE: Byline
-    BANNER: Banner Image
-    PAGE_MEDIA: Jumbotron Image (First image only)
-  FREEFORM:
-    STYLE_CLASSES: Style Classes
-    STYLE_CLASSES_HELP: Adjust this text modular's appearance using these styles
-    STYLE_CLASS_OPTIONS:
-      INVERSE: Inverted Colors
-      COLUMNS: Multiple Columns
+  ACCESSIBILITY:
+    SKIP_TO_CONTENT: Skip to Content
+  PAGE:
+    HEADER_EXTRAS:
+      LABEL: Header Extras
+      BYLINE:
+        LABEL: Byline
+        HELP: A second line to describe your page
+      HEADER_IMAGE:
+        LABEL: Display a Header Image?
+        HELP: Will display either an image-based banner or a text-only header.
+      HEADER_IMAGE_FILE:
+        LABEL: Header Image File
+        HELP: Choose the file from this page's media to display as the header image
+  MODULAR:
+    FREEFORM:
+      LABEL: Free Text Entry
+      STYLE_CLASSES:
+        LABEL: Style Classes
+        HELP: Adjust this text modular's appearance using these styles
+        OPTIONS:
+          INVERSE: Inverted Colors
+          COLUMNS: Multiple Columns
+          HIDE_HEADER: Hide Header (Remains for screenreaders)
+    SHOWCASE:
+      TITLE: Site Showcase
+      SOURCE:
+        LABEL: URL to include
+        HELP: You may need to spider/host this somewhere that'll permit embedding via iframe.
+  PORTFOLIO:
+    ITEMS: Our Work
+  BLOG:
+    ITEMS: Entries
+    ITEM:
+      CONTINUE_READING: Continue reading...
+      NEXT_POST: Next Post
+      PREV_POST: Previous Post
   FORM_DATA:
     SUMMARY: "Here is the summary of what you wrote to us:"
   ERROR: Error
+

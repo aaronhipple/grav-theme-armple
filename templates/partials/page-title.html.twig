@@ -1,0 +1,33 @@
+{% set header_image = page.header.header_image | defined(true) %}
+{% set header_image_file = page.header.header_image_file %}
+
+{% if not header_image %}
+    {% set image = null %}
+{% elseif header_image_file %}
+    {% set image = page.media.images[header_image_file] %}
+{% else %}
+    {% set image = page.media.images|first %}
+{% endif %}
+
+{% set title = page.title %}
+{% set byline = page.header.byline %}
+
+<header
+    {% if image %}
+    class="jumbotron"
+    style="
+            background-image: url('{{ image.cropZoom(1920,1080).url }}');
+            background-image: -webkit-image-set( url({{ image.cropZoom(1920,1080).url }}) 1x, url({{ image.cropZoom(3840,2160).url }}) 2x );
+            "
+    {% else %}
+    class="no-image"
+    {% endif %}>
+    <div class="title">
+        <h1><span>{{ title }}</span></h1>
+        {% if byline %}
+            <div class="byline">
+                {{ byline }}
+            </div>
+        {% endif %}
+    </div>
+</header>

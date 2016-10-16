@@ -1,0 +1,46 @@
+$scale: 2/3;
+$border-size: 2em;
+$border-color: #222;
+.modular-showcase {
+  .container {
+    overflow: visible;
+  }
+  .frames {
+    position: relative;
+    margin-bottom: 2em;
+    perspective: 150em;
+  }
+  .frame-wrapper {
+    transform-origin: top left;
+    transform: scale($scale) rotate3d(0.5,1,0,2deg);
+    position: relative;
+  }
+  .desktop-size {
+    $desktop-size: 95%;
+    width: $desktop-size;
+    padding-bottom: (10/16) * $desktop-size;
+  }
+  .phone-size {
+    position: absolute;
+    bottom: -2em;
+    right: 0;
+    $phone-width: 2/7;
+    width: 100% * $phone-width;
+    margin: auto;
+    padding-bottom: (16/10) * 100% * $phone-width;
+  }
+  iframe {
+    background: $border-color;
+    box-shadow: 0 1em 2em rgba(0,0,0,0.25);
+    box-sizing: border-box;
+    display: block;
+    width: 100% * (1 / $scale);
+    height: 100% * (1 / $scale);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border: 2em solid $border-color;
+    border-radius: 1em;
+  }
+}

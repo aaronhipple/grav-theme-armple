@@ -8,21 +8,129 @@ body {
 
 a {
     color: $link-color;
+    .inverse & {
+        color: $inverse-link-color;
+    }
     text-decoration: none;
-    background: linear-gradient($link-color, $link-color) center $link-underline-offset no-repeat;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: center $link-underline-offset;
+    background-repeat: no-repeat;
     background-size: 0 1.5px;
     transition: all $transition-time ease;
     &:hover, &:focus {
         background-size: 100% 1.5px;
         outline: none;
     }
-}
 
+
+}
 
 h1, h2, h3, h4 {
     font-family: $font-heading;
     font-weight: $weight-heading;
 }
+
+h1,
+.h1 {
+    font-size: 2em;
+}
+
+
+
+h2,
+.h2 {
+    font-size: 1.66em;
+}
+:-webkit-any(section, article, aside, nav) h1 {
+    font-size: 1.66em;
+}
+:-moz-any(section, article, aside, nav) h1 {
+    font-size: 1.66em;
+}
+
+
+
+h3,
+.h3 {
+    font-size: 1.5em;
+}
+:-webkit-any(section, article, aside, nav) h2,
+:-webkit-any(section, article, aside, nav)
+:-webkit-any(section, article, aside, nav) h3 {
+    font-size: 1.5em;
+}
+:-moz-any(section, article, aside, nav) h2,
+:-moz-any(section, article, aside, nav)
+:-moz-any(section, article, aside, nav) h3 {
+    font-size: 1.5em;
+}
+
+
+
+h4,
+.h4 {
+    font-size: 1.33em;
+}
+:-webkit-any(section, article, aside, nav) h3,
+:-webkit-any(section, article, aside, nav)
+:-webkit-any(section, article, aside, nav) h4,
+:-webkit-any(section, article, aside, nav)
+:-webkit-any(section, article, aside, nav)
+:-webkit-any(section, article, aside, nav) h5 {
+    font-size: 1.33em;
+}
+:-moz-any(section, article, aside, nav) h3,
+:-moz-any(section, article, aside, nav)
+:-moz-any(section, article, aside, nav) h4,
+:-moz-any(section, article, aside, nav)
+:-moz-any(section, article, aside, nav)
+:-moz-any(section, article, aside, nav) h5 {
+    font-size: 1.33em;
+}
+
+
+
+h5,
+.h5 {
+    font-size: 1em;
+    font-style: italic;
+}
+:-webkit-any(section, article, aside, nav) h4,
+:-webkit-any(section, article, aside, nav)
+:-webkit-any(section, article, aside, nav) h5,
+:-webkit-any(section, article, aside, nav)
+:-webkit-any(section, article, aside, nav)
+:-webkit-any(section, article, aside, nav) h6 {
+    font-size: 1em;
+    font-style: italic;
+}
+:-moz-any(section, article, aside, nav) h4,
+:-moz-any(section, article, aside, nav)
+:-moz-any(section, article, aside, nav) h5,
+:-moz-any(section, article, aside, nav)
+:-moz-any(section, article, aside, nav)
+:-moz-any(section, article, aside, nav) h6 {
+    font-size: 1em;
+    font-style: italic;
+}
+
+
+h6,
+.h6 {
+    font-size: 1em;
+}
+:-webkit-any(section, article, aside, nav) h5,
+:-webkit-any(section, article, aside, nav)
+:-webkit-any(section, article, aside, nav) h6 {
+    font-size: 1em;
+}
+:-moz-any(section, article, aside, nav) h5,
+:-moz-any(section, article, aside, nav)
+:-moz-any(section, article, aside, nav) h6 {
+    font-size: 1em;
+}
+
+
 
 strong, b {
     font-weight: $weight-body-bold;
@@ -56,7 +164,7 @@ blockquote {
 }
 
 main {
-    .container > p:first-of-type:first-letter {
+    /*.container > p:first-of-type:first-letter {
         color: darken($body-color, 10%);
         font-size: 4em;
         float: left;
@@ -74,7 +182,7 @@ main {
         float: none;
         margin: 0;
         line-height: inherit;
-    }
+    }*/
     h1, h2, h3, h4, h5, h6 {
         text-transform: lowercase;
     }

@@ -1,8 +1,11 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    {{ page.content }}
-    {% for module in page.collection() %}
-        {{ module.content }}
-    {% endfor %}
+    <article class="modular">
+        {% include 'partials/page-title.html.twig' %}
+        {{ page.content }}
+        {% for module in page.collection() %}
+            {{ module.content }}
+        {% endfor %}
+    </article>
 {% endblock %}

@@ -3,13 +3,19 @@
 // @import 'animations';
 @import 'typography';
 @import 'forms';
+@import 'accessibility';
 @import 'modules/article';
+@import 'modules/article-header';
 @import 'modules/footer';
 @import 'modules/header';
-@import 'modules/jumbotron';
 @import 'modules/section';
-@import 'modules/portfolio';
 @import 'modules/toggler';
+@import 'modules/portfolio';
+@import 'modules/showcase';
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
 body {
     margin: 0;
@@ -17,6 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     @include set-colors($body-color, $body-bg);
+    box-sizing: border-box;
 }
 
 body > main {
@@ -45,4 +52,3 @@ main {
     margin: auto;
     text-align: justify;
 }
-

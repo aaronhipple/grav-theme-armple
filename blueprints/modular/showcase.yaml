@@ -1,0 +1,13 @@
+title: MODULAR.SHOWCASE.TITLE
+'@extends': modular/freeform
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            header.source:
+              type: text
+              label: MODULAR.SHOWCASE.SOURCE.LABEL
+              help: MODULAR.SHOWCASE.SOURCE.LABEL

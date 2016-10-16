@@ -1,28 +1,14 @@
 title: Form
+'@extends': modular/freeform
 
 form:
   fields:
     tabs:
-      type: tabs
-      active: 1
-
       fields:
         content:
-          type: tab
-          title: PLUGIN_ADMIN.CONTENT
-
           fields:
-            content:
-              type: markdown
+            header.cache_enable:
+              type: hidden
+              default: 0
               validate:
-                type: textarea
-
-            header.classes:
-              type: select
-              multiple: true
-              label: FREEFORM.STYLE_CLASSES
-              help: FREEFORM.STYLE_CLASSES_HELP
-              options:
-                inverse: FREEFORM.STYLE_CLASS_OPTIONS.INVERSE
-              validate:
-                type: list
+                type: bool

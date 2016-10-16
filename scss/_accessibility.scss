@@ -1,0 +1,9 @@
+#skip {
+  @include screenreader-only();
+  @include screenreader-only-focusable();
+  @include screenreader-only-focusable-button();
+}
+
+.audible {
+  @include screenreader-only();
+}

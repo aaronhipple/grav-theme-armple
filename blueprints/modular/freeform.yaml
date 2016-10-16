@@ -1,33 +1,22 @@
 title: Freeform
+'@extends': default
 
 form:
   fields:
     tabs:
-      type: tabs
-      active: 1
-
       fields:
+        header:
+          type: ignore
         content:
-          type: tab
-          title: PLUGIN_ADMIN.CONTENT
-
           fields:
-            content:
-              type: markdown
-              validate:
-                type: textarea
-
-            uploads:
-              type: pagemedia
-              label: PLUGIN_ADMIN.PAGE_MEDIA
-
             header.classes:
               type: select
               multiple: true
-              label: FREEFORM.STYLE_CLASSES
-              help: FREEFORM.STYLE_CLASSES_HELP
+              label: MODULAR.FREEFORM.STYLE_CLASSES.LABEL
+              help: MODULAR.FREEFORM.STYLE_CLASSES.HELP
               options:
-                columns: FREEFORM.STYLE_CLASS_OPTIONS.COLUMNS
-                inverse: FREEFORM.STYLE_CLASS_OPTIONS.INVERSE
+                columns: MODULAR.FREEFORM.STYLE_CLASSES.OPTIONS.COLUMNS
+                inverse: MODULAR.FREEFORM.STYLE_CLASSES.OPTIONS.INVERSE
+                hide-header: MODULAR.FREEFORM.STYLE_CLASSES.OPTIONS.HIDE_HEADER
               validate:
                 type: list
