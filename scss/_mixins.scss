@@ -23,6 +23,10 @@
     }
 }
 
+@mixin small-font() {
+    font-size: $font-size-small;
+}
+
 @mixin set-colors($fg, $bg) {
     background-color: $bg;
     color: $fg;

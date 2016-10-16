@@ -35,6 +35,14 @@
 </head>
 <body class="{{ page.header.body_classes }}">
     <a id="skip" href="#content">{{ 'ACCESSIBILITY.SKIP_TO_CONTENT'|t }}</a>
+    {{ dump(browser.getBrowser) }}
+    {% if (browser.getBrowser == 'msie' and browser.getVersion <= 11) or
+          (browser.getBrowser == 'safari' and browser.getVersion < 9) or
+          (browser.getBrowser == 'android browser' and browser.getVersion < 4.4) %}
+        <div class="alert container">
+            {{ 'ALERT.OLD_BROWSER'|t|markdown }}
+        </div>
+    {% endif %}
     {% block header %}
     <header>
         <div class="container">

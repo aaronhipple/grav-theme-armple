@@ -1,0 +1,37 @@
+.blog {
+  > header {
+
+    .byline,
+    .tags {
+      @media (min-width: $container-width) {
+        text-align: center;
+      }
+      @include small-font();
+    }
+
+    .tags {
+      padding: 0;
+      ul {
+        list-style-type: none;
+        li {
+          display: inline-block;
+        }
+      }
+    }
+
+    + .container {
+      padding-top: $gap;
+      padding-bottom: $gap;
+    }
+  }
+
+  nav.prev-next {
+    overflow: hidden;
+    .prev {
+      float: left;
+    }
+    .next {
+      float: right;
+    }
+  }
+}

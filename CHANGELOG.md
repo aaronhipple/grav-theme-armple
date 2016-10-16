@@ -5,11 +5,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+- Nothing yet
+
+## [0.5.0] - 2016-10-16
 ### Added
 - Fullscreen styles for footer nav
+- Old browser alert in header
+- Blog styles, pagination, etc.
 ### Fixed
 - Nav items unclickable at mobile screen sizes
 - Improved mobile view of portfolio list items
+- Some typographic improvements at mobile sizes
 
 ## [0.4.0] - 2016-10-16
 ### Added

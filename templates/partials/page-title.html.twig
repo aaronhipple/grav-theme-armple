@@ -1,16 +1,23 @@
-{% set header_image = page.header.header_image | defined(true) %}
-{% set header_image_file = page.header.header_image_file %}
+{% if image is empty %}
+    {% set header_image = page.header.header_image | defined(true) %}
+    {% set header_image_file = page.header.header_image_file %}
 
-{% if not header_image %}
-    {% set image = null %}
-{% elseif header_image_file %}
-    {% set image = page.media.images[header_image_file] %}
-{% else %}
-    {% set image = page.media.images|first %}
+    {% if not header_image %}
+        {% set image = null %}
+    {% elseif header_image_file %}
+        {% set image = page.media.images[header_image_file] %}
+    {% else %}
+        {% set image = page.media.images|first %}
+    {% endif %}
 {% endif %}
 
-{% set title = page.title %}
-{% set byline = page.header.byline %}
+{% if title is empty %}
+    {% set title = page.title %}
+{% endif %}
+
+{% if byline is empty %}
+    {% set byline = page.header.byline %}
+{% endif %}
 
 <header
     {% if image %}
@@ -22,12 +29,20 @@
     {% else %}
     class="no-image"
     {% endif %}>
-    <div class="title">
-        <h1><span>{{ title }}</span></h1>
-        {% if byline %}
-            <div class="byline">
-                {{ byline }}
-            </div>
-        {% endif %}
+
+    {% if title_link and title_link != uri.path %}
+    <h1><a href="{{ title_link }}">{{ title }}</a></h1>
+    {% else %}
+    <h1><span>{{ title }}</span></h1>
+    {% endif %}
+
+    {% if byline %}
+    <div class="byline">
+        {{ byline }}
     </div>
+    {% endif %}
+
+    {% if extras %}
+    {{ extras|raw }}
+    {% endif %}
 </header>

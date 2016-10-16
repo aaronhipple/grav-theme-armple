@@ -1,13 +1,16 @@
 main section {
     padding: $gap/2 0;
+    h1, h2, h3, h4, h5, h6 {
+        text-align: left;
+    }
     @media (min-width: $container-width) {
         padding: $gap 0;
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+        }
     }
     .container {
         overflow: hidden;
-    }
-    h1, h2, h3, h4, h5, h6 {
-        text-align: left;
     }
 }
 
@@ -25,8 +28,7 @@ section.raw-content.columns {
         break-inside: avoid;
     }
     @media (min-width: $container-width) {
-        h1, h2, h3, h4, .break-columns {
-            text-align: center;
+        h1, h2, h3, h4, h5, h6, .break-columns {
             column-span: all;
             + * {
                 margin-top: 0;

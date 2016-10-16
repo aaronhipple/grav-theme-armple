@@ -1,25 +1,34 @@
 {% extends 'partials/base.html.twig' %}
 
 {% set collection = page.collection() %}
+{% set content = page.content %}
 
 {% block content %}
 	<article class="blog">
 		{% include 'partials/page-title.html.twig' %}
+		{% if content %}
 		<section>
 			<div class="container">
-				{{ page.content }}
+				{{ content }}
 			</div>
 		</section>
-		<div class="container">
+		{% endif %}
+		{% if content %}
+		<section class="inverse">
 			<h1>{{ 'BLOG.ITEMS'|t }}</h1>
+		{% endif %}
 			<div class="blog-items" role="list">
 				{% for child in collection %}
 					{% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
 				{% endfor %}
 			</div>
 			{% if config.plugins.pagination.enabled and collection.params.pagination %}
-				{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+				<nav>
+					{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+				</nav>
 			{% endif %}
-		</div>
+		{% if content %}
+		</section>
+		{% endif %}
 	</article>
 {% endblock %}

@@ -1,36 +1,27 @@
-<article role="listitem">
+{% set dateformat = config.system.dateformat.short %}
+{% set author = page.header.author|defined(config.site.author) %}
+{% set is_current_page = (page.url == uri.path) %}
 
-    <header>
-        <time class="dt-published" datetime="{{ page.date|date("c") }}">
-            <span>{{ page.date|date("d") }}</span>
-            <em>{{ page.date|date("M") }}</em>
-        </time>
+<article {% if not is_current_page %} role="listitem"{% endif %} class="blog">
 
-        {% if page.header.link %}
-            <h1>
-                {% if page.header.continue_link is not sameas(false) %}
-                <a href="{{ page.url }}">»</a>
-                {% endif %}
-                <a href="{{ page.header.link }}">{{ page.title }}</a>
-            </h1>
-        {% else %}
-            <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
-        {% endif %}
-
+    {% set title = page.title %}
+    {% set title_link = page.header.link|default(page.url) %}
+    {% set byline = 'BLOG.PUBLISHED_ON'|t(author.name, page.date|date("c"), page.date|date(dateformat), page.date|nicetime)|raw %}
+    {% set extras %}
         {% if page.taxonomy.tag %}
-        <span class="tags">
-            {% for tag in page.taxonomy.tag %}
-            <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
-            {% endfor %}
-        </span>
+            <div class="tags">
+                <ul>
+                {% for tag in page.taxonomy.tag %}
+                    <li><a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a></li>
+                {% endfor %}
+                </ul>
+            </div>
         {% endif %}
+    {% endset %}
 
-        {% if header_image %}
-            {{ header_image_media.cropZoom(1920, 400).html }}
-        {% endif %}
-    </header>
+    {% include 'partials/page-title.html.twig' %}
 
-    <div>
+    <div class="container">
     {% if page.header.continue_link is sameas(false) %}
     {{ page.content }}
         {% if not truncate %}
@@ -41,7 +32,7 @@
         <p><a href="{{ page.url }}">{{ 'BLOG.ITEM.CONTINUE_READING'|t }}</a></p>
     {% elseif truncate %}
         {% if page.summary != page.content %}
-        {{ page.content|truncate(550) }}
+        {{ page.content|safe_truncate_html(550) }}
         {% else %}
         {{ page.content }}
         {% endif %}
@@ -59,11 +50,11 @@
     {% if show_prev_next %}
     <nav class="prev-next">
         {% if not page.isFirst %}
-        <a class="button" href="{{ page.nextSibling.url }}">« {{ 'BLOG.ITEM.NEXT_POST'|t }}</a>
+        <a class="next" href="{{ page.nextSibling.url }}">{{ 'BLOG.ITEM.NEXT_POST'|t }} »</a>
         {% endif %}
 
         {% if not page.isLast %}
-        <a class="button" href="{{ page.prevSibling.url }}">{{ 'BLOG.ITEM.PREV_POST'|t }} »</a>
+        <a class="previous" href="{{ page.prevSibling.url }}">« {{ 'BLOG.ITEM.PREV_POST'|t }}</a>
         {% endif %}
     </nav>
     {% endif %}

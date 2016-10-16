@@ -1,4 +1,10 @@
 en:
+  ALERT:
+    OLD_BROWSER: |
+      **Old Web Browser Alert**
+
+      It looks like you're using an old web browser. Normally we like vintage things as much as the next person, but old browsers may not show you
+      everything the internet can do these days, plus they're more vulnerable to hacking. [Try one of these!](https://browser-update.org/update.html)
   ACCESSIBILITY:
     SKIP_TO_CONTENT: Skip to Content
   PAGE:
@@ -31,6 +37,8 @@ en:
   PORTFOLIO:
     ITEMS: Our Work
   BLOG:
+    PUBLISHED_ON: |
+      %s — published <time datetime="%s">%s <em>(%s)</em></time>
     ITEMS: Entries
     ITEM:
       CONTINUE_READING: Continue reading...

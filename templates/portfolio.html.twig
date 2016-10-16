@@ -5,14 +5,19 @@
 {% block content %}
     <article class="portfolio">
         {% include 'partials/page-title.html.twig' %}
+        {% if content %}
         <section>
             <div class="container">
                 {{ page.content }}
             </div>
         </section>
-        <section class="inverse">
+        {% endif %}
+
+        <section {% if content %} class="inverse" {% endif %}>
             <div class="container">
+                {% if content %}
                 <h1>{{ 'PORTFOLIO.ITEMS'|t }}</h1>
+                {% endif %}
                 <div class="portfolio-items" role="list">
                 {% for item in collection %}
                     {% set thumbnail = item.media.images|first %}

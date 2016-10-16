@@ -17,7 +17,6 @@ main > article {
     > section {
         > .container {
             margin: auto;
-            padding: $gap 1em;
         }
     }
     @media (min-width: $container-width) {
