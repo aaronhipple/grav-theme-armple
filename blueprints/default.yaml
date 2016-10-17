@@ -11,11 +11,16 @@ form:
           type: tab
           title: PAGE.HEADER_EXTRAS.LABEL
           fields:
+            header.display_title:
+              type: text
+              style: vertical
+              label: PAGE.HEADER_EXTRAS.DISPLAY_TITLE.LABEL
+              help: PAGE.HEADER_EXTRAS.DISPLAY_TITLE.HELP
             header.byline:
               type: text
               style: vertical
               label: PAGE.HEADER_EXTRAS.BYLINE.LABEL
-              help: PAGE.HEADER_EXTRAS.BYLINE_HELP
+              help: PAGE.HEADER_EXTRAS.BYLINE.HELP
             header.header_image:
               type: toggle
               highlight: 1

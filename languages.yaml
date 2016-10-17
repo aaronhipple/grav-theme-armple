@@ -10,6 +10,9 @@ en:
   PAGE:
     HEADER_EXTRAS:
       LABEL: Header Extras
+      DISPLAY_TITLE:
+        LABEL: Display Title
+        HELP: An alternate title to show in context on the page (if you wish something different from the page title)
       BYLINE:
         LABEL: Byline
         HELP: A second line to describe your page

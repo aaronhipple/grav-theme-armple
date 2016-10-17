@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 - Nothing yet
 
+## [0.6.0] - 2016-10-16
+### Added
+- display_title — an alternate title for display inline on the page
+### Fixed
+- Improper translation reference in Header Extras
+
 ## [0.5.2] - 2016-10-16
 ### Changed
 - Embiggened the footer font a bit (doesn't really need to be smaller)
@@ -48,7 +54,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.1.1] - 2016-10-05
 ### Added
 - Form and error handling from @aaronhipple.
-
 ### Fixed
 - General bug fixes — it works — from @aaronhipple.
 
@@ -56,8 +61,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - A theme from @aaronhipple.
 
-[Unreleased]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.5.2...HEAD
-[0.5.1]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.5.1...v0.5.2
+[Unreleased]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.5.2...v0.6.0
+[0.5.2]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.5.1...v0.5.2
 [0.5.1]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.3.0...v0.4.0

@@ -12,7 +12,7 @@
 {% endif %}
 
 {% if title is empty %}
-    {% set title = page.title %}
+    {% set title = page.header.display_title|default(page.title) %}
 {% endif %}
 
 {% if byline is empty %}
