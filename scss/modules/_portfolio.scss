@@ -26,6 +26,20 @@ $portfolio-offset: 33.333%;
       transition: background-color $transition-time ease;
       background-color: transparentize(black, 0.33);
     }
+
+    &:nth-child(4n - 1):after {
+      background-color: transparentize(black, 0.30);
+    }
+    &:nth-child(4n):after {
+      background-color: transparentize(black, 0.35);
+    }
+    &:nth-child(4n + 1):after {
+      background-color: transparentize(black, 0.32);
+    }
+    &:nth-child(4n + 2):after {
+      background-color: transparentize(black, 0.28);
+    }
+
     &:hover:before,
     &:focus:before {
       background-color: transparentize(black, 0.75);

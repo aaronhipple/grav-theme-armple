@@ -1,6 +1,8 @@
 $scale: 2/3;
+$mobile-scale: 1/4;
 $border-size: 2em;
 $border-color: #222;
+
 .modular-showcase {
   .container {
     overflow: visible;
@@ -12,8 +14,11 @@ $border-color: #222;
   }
   .frame-wrapper {
     transform-origin: top left;
-    transform: scale($scale) rotate3d(0.5,1,0,2deg);
     position: relative;
+    transform: scale($scale) rotate3d(0.5,1,0,2deg);
+    @media (max-width: $container-width) {
+      transform: scale($mobile-scale) rotate3d(0.5,1,0,2deg);
+    }
   }
   .desktop-size {
     $desktop-size: 95%;
@@ -39,8 +44,13 @@ $border-color: #222;
     position: absolute;
     top: 0;
     left: 0;
-
     border: 2em solid $border-color;
     border-radius: 1em;
+
+    @media (max-width: $container-width) {
+      width: 100% * (1 / $mobile-scale);
+      height: 100% * (1 / $mobile-scale);
+      border: 1em solid $border-color;
+    }
   }
 }
