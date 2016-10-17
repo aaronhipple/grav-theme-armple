@@ -1,8 +1,5 @@
 footer {
     padding: ($gap / 2) 0;
-    .container > * {
-        @include small-font();
-    }
     @media (min-width: $container-width) {
         nav > ul {
             list-style-type: none;

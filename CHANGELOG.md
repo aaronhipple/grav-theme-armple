@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 - Nothing yet
 
+## [0.5.2] - 2016-10-16
+### Changed
+- Embiggened the footer font a bit (doesn't really need to be smaller)
+  
 ## [0.5.1] - 2016-10-16
 ### Fixed
 - Portfolio style improvements (list view separation and
@@ -52,7 +56,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - A theme from @aaronhipple.
 
-[Unreleased]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.5.1...HEAD
+[Unreleased]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.5.2...HEAD
+[0.5.1]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.5.1...v0.5.2
 [0.5.1]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.3.0...v0.4.0
