@@ -82,7 +82,7 @@ body > header {
                 margin: 0;
                 @media (min-width: $container-width) {
                     display: inline-block;
-                    margin: 1em;
+                    margin: 1em 0.5em;
                     &:first-child {
                         margin-left: 0;
                     }
