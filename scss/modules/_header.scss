@@ -1,8 +1,9 @@
 body > header {
     .brand {
-        font-family: $font-heading;
+        font-family: $font-brand;
         font-weight: $weight-brand;
         font-size: 1.5em;
+        text-transform: lowercase;
     }
     .container {
         position: relative;

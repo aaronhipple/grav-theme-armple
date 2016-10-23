@@ -164,7 +164,7 @@ blockquote {
 }
 
 main {
-    /*.container > p:first-of-type:first-letter {
+    section > .container > p:first-of-type:first-letter {
         color: darken($body-color, 10%);
         font-size: 4em;
         float: left;
@@ -182,9 +182,15 @@ main {
         float: none;
         margin: 0;
         line-height: inherit;
-    }*/
+    }
     h1, h2, h3, h4, h5, h6 {
         text-transform: lowercase;
+    }
+    li > :first-child {
+        margin-top: 0;
+    }
+    li > :last-child {
+        margin-bottom: 0;
     }
 }
 

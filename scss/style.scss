@@ -32,6 +32,10 @@ body > main {
     flex: 1;
 }
 
+nav {
+    font-family: $font-nav;
+}
+
 .container {
     max-width: $container-width;
     padding: 0 1em;

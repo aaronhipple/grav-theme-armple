@@ -1,15 +1,15 @@
 name: Armple
-version: 0.6.1
+version: 0.6.2
 description: "Colette & Aaron's Site"
 icon: pied-piper
 author:
   name: Aaron Hipple
   email: ahipple@gmail.com
   url: https://www.aaronhipple.com
-homepage: https://github.com/getgrav/grav-theme-antimatter
-demo: http://demo.getgrav.org/blog-skeleton
+homepage: https://github.com/aaronhipple/grav-theme-armple
+demo: https://aarmplette.aaronhipple.com
 keywords: theme, core, modern, fast, responsive, html5, css3
-bugs: https://github.com/getgrav/grav-theme-antimatter/issues
+bugs: https://github.com/aaronhipple/grav-theme-armple/issues
 license: MIT
 
 form:

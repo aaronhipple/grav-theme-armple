@@ -15,13 +15,15 @@ $inverse-link-color: saturate(lighten($ideal-link-color, 30%), 15%);
 $menu-scale: 0.025em;
 
 $font-size: 20px;
-$font-heading: 'Montserrat', sans-serif;
+$font-heading: 'Advent Pro', sans-serif;
+$font-brand: $font-heading;
+$font-nav: $font-heading;
 $font-size-small: 16/20 * 1em;
-$weight-heading: 400;
+$weight-heading: 600;
 $font-body: 'Maitree', serif;
 $weight-body: 400;
 $weight-body-bold: 700;
-$weight-brand: $weight-heading;
+$weight-brand: 200;
 $font-code: 'Share Tech Mono', monospace;
 
 $font-small-lockpoint: ($container-width / 1em) * $font-size;
