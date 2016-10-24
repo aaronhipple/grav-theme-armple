@@ -47,7 +47,7 @@
     <header>
         <div class="container">
             <div class="header-bar">
-                <div class="brand"><a href="{{ base_url == '' ? '/' : base_url }}">{{ config.site.title }}</a></div>
+                <div class="brand"><a href="{{ base_url == '' ? '/' : base_url }}">{% include 'partials/brand-icon.svg.twig' %}{{ config.site.title }}</a></div>
                 <label for="header-nav-toggle" class="toggler">
                     <span class="icon">
                         <span></span>

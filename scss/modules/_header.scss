@@ -1,5 +1,13 @@
 body > header {
     .brand {
+        svg {
+            height: 0.66em;
+            width: auto;
+            fill: currentColor;
+            display: inline-block;
+            vertical-align: baseline;
+            margin-right: 0.1em;
+        }
         font-family: $font-brand;
         font-weight: $weight-brand;
         font-size: 1.5em;
