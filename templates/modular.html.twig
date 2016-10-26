@@ -5,7 +5,9 @@
         {% include 'partials/page-title.html.twig' %}
         {{ page.content }}
         {% for module in page.collection() %}
-            {{ module.content }}
+            <section id="{{ module.title | camelize }}" class="modular {{ module.template | underscorize | replace({'_': '-'})}} {{ module.header.classes | join (" ") }}">
+                {{ module.content }}
+            </section>
         {% endfor %}
     </article>
 {% endblock %}

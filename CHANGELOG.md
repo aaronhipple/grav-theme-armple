@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 - Nothing yet
 
+## [0.7.0] - 2016-10-25
+### Changed
+- Heading sizes now ratio-based
+### Added
+- Teaser Grid modular type
+
 ## [0.6.3] - 2016-10-23
 ### Added
 - Provisional tortoise shell icon
@@ -73,7 +79,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - A theme from @aaronhipple.
 
-[Unreleased]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.6.3...HEAD
+[Unreleased]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.6.3...v0.7.0
 [0.6.3]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.6.2...v0.6.3
 [0.6.2]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/aaronhipple/grav-plugin-mailchimp/compare/v0.6.0...v0.6.1

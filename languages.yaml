@@ -37,6 +37,19 @@ en:
       SOURCE:
         LABEL: URL to include
         HELP: You may need to spider/host this somewhere that'll permit embedding via iframe.
+    TEASER_GRID:
+      LABEL: Teaser Items
+      HELP: A grid of teaser items displayed three-up or two-up
+      TITLE:
+        LABEL: Title
+      CONTENT:
+        LABEL: Content
+      LINK_DESTINATION:
+        LABEL: Link Destination
+      LINK_TEXT:
+        LABEL: Link Text
+      IMAGE:
+        LABEL: Image
   PORTFOLIO:
     ITEMS: Our Work
   BLOG:

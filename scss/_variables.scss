@@ -30,3 +30,12 @@ $font-small-lockpoint: ($container-width / 1em) * $font-size;
 $font-large-lockpoint: ($container-width + 30em / 1em) * $font-size;
 
 $transition-time: 100ms;
+
+
+$ratio: 7/5;
+$heading-1-size: 1em * $ratio * $ratio * $ratio * $ratio ;
+$heading-2-size: 1em * $ratio * $ratio * $ratio;
+$heading-3-size: 1em * $ratio * $ratio;
+$heading-4-size: 1em * $ratio;
+$heading-5-size: 1em;
+$heading-6-size: 1em;

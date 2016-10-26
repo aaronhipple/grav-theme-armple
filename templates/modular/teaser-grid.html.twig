@@ -1,0 +1,22 @@
+{% set teasers = header.teasers %}
+<div class="container">
+    <h1>{{ page.title }}</h1>
+    {% if teasers %}
+        <div class="grid">
+            {% for teaser in teasers %}
+                <article class="teaser">
+                    {{ teaser.image }}
+                    <h2>{{ teaser.title }}</h2>
+                    <div class="content">
+                        {{ teaser.content | markdown }}
+                    </div>
+                    {% if teaser.link_destination and teaser.link_text %}
+                    <div class="text-center">
+                        <a href="{{ teaser.link_destination }}" class="button">{{ teaser.link_text }}</a>
+                    </div>
+                    {% endif %}
+                </article>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>

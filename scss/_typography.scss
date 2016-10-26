@@ -32,44 +32,44 @@ h1, h2, h3, h4 {
 
 h1,
 .h1 {
-    font-size: 2em;
+    font-size: $heading-1-size;
 }
 
 
 
 h2,
 .h2 {
-    font-size: 1.66em;
+    font-size: $heading-2-size;
 }
 :-webkit-any(section, article, aside, nav) h1 {
-    font-size: 1.66em;
+    font-size: $heading-2-size;
 }
 :-moz-any(section, article, aside, nav) h1 {
-    font-size: 1.66em;
+    font-size: $heading-2-size;
 }
 
 
 
 h3,
 .h3 {
-    font-size: 1.5em;
+    font-size: $heading-3-size;
 }
 :-webkit-any(section, article, aside, nav) h2,
 :-webkit-any(section, article, aside, nav)
 :-webkit-any(section, article, aside, nav) h3 {
-    font-size: 1.5em;
+    font-size: $heading-3-size;
 }
 :-moz-any(section, article, aside, nav) h2,
 :-moz-any(section, article, aside, nav)
 :-moz-any(section, article, aside, nav) h3 {
-    font-size: 1.5em;
+    font-size: $heading-3-size;
 }
 
 
 
 h4,
 .h4 {
-    font-size: 1.33em;
+    font-size: $heading-4-size;
 }
 :-webkit-any(section, article, aside, nav) h3,
 :-webkit-any(section, article, aside, nav)
@@ -77,7 +77,7 @@ h4,
 :-webkit-any(section, article, aside, nav)
 :-webkit-any(section, article, aside, nav)
 :-webkit-any(section, article, aside, nav) h5 {
-    font-size: 1.33em;
+    font-size: $heading-4-size;
 }
 :-moz-any(section, article, aside, nav) h3,
 :-moz-any(section, article, aside, nav)
@@ -85,14 +85,14 @@ h4,
 :-moz-any(section, article, aside, nav)
 :-moz-any(section, article, aside, nav)
 :-moz-any(section, article, aside, nav) h5 {
-    font-size: 1.33em;
+    font-size: $heading-4-size;
 }
 
 
 
 h5,
 .h5 {
-    font-size: 1em;
+    font-size: $heading-5-size;
     font-style: italic;
 }
 :-webkit-any(section, article, aside, nav) h4,
@@ -101,7 +101,7 @@ h5,
 :-webkit-any(section, article, aside, nav)
 :-webkit-any(section, article, aside, nav)
 :-webkit-any(section, article, aside, nav) h6 {
-    font-size: 1em;
+    font-size: $heading-5-size;
     font-style: italic;
 }
 :-moz-any(section, article, aside, nav) h4,
@@ -110,24 +110,24 @@ h5,
 :-moz-any(section, article, aside, nav)
 :-moz-any(section, article, aside, nav)
 :-moz-any(section, article, aside, nav) h6 {
-    font-size: 1em;
+    font-size: $heading-5-size;
     font-style: italic;
 }
 
 
 h6,
 .h6 {
-    font-size: 1em;
+    font-size: $heading-6-size;
 }
 :-webkit-any(section, article, aside, nav) h5,
 :-webkit-any(section, article, aside, nav)
 :-webkit-any(section, article, aside, nav) h6 {
-    font-size: 1em;
+    font-size: $heading-6-size;
 }
 :-moz-any(section, article, aside, nav) h5,
 :-moz-any(section, article, aside, nav)
 :-moz-any(section, article, aside, nav) h6 {
-    font-size: 1em;
+    font-size: $heading-6-size;
 }
 
 

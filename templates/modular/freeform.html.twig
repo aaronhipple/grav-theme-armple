@@ -1,7 +1,5 @@
 {% set classes = page.header.classes %}
-<section class="modular raw-content {{ classes | join(' ') }}">
-    <div class="container">
-        <h1>{{ page.title }}</h1>
-        {{ content }}
-    </div>
-</section>
+<div class="container">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+</div>

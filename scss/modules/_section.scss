@@ -23,7 +23,7 @@ section.inverse {
     @include set-colors($body-bg, $body-color);
 }
 
-section.raw-content.columns {
+section.modular-freeform.columns {
     blockquote, ul, ol, dl, pre {
         break-inside: avoid;
     }
